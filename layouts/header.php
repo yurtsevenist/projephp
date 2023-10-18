@@ -29,10 +29,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.php">Anasayfa</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.php">Hakkımda</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.php">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.php">İletişim</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 <?php if($pagename=="index"){ echo 'text-warning';} ?> "  href="index.php">Anasayfa</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 <?php if($pagename=="about"){ echo 'text-warning';} ?>" href="about.php">Hakkımda</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 <?php if($pagename=="post"){ echo 'text-warning';} ?>" href="post.php">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4 <?php if($pagename=="contact"){ echo 'text-warning';} ?>" href="contact.php">İletişim</a></li>
                     </ul>
                 </div>
             </div>

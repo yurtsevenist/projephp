@@ -1,4 +1,5 @@
 <?php
+$pagename ="post";
 include("layouts/header.php");
 ?>
         <!-- Page Header-->

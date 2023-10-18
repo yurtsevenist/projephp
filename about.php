@@ -1,4 +1,5 @@
 <?php
+$pagename ="about";
 include("layouts/header.php");
 ?>
         <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">

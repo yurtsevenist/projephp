@@ -1,4 +1,5 @@
 <?php
+$pagename ="contact";
 include("layouts/header.php");
 ?>
 

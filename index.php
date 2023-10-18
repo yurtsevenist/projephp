@@ -1,4 +1,5 @@
 <?php
+$pagename ="index";
 include("layouts/header.php");
 ?>
         <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
