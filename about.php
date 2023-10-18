@@ -1,4 +1,13 @@
 <?php
+include("php/connect.php");
+$sorgu=$baglanti->query("SELECT * FROM about WHERE status=1",PDO::FETCH_ASSOC);
+    foreach($sorgu as $veri)
+    {        
+        $title=$veri["title"];
+        $motto=$veri["motto"];
+        $content=$veri["content"];                  
+    }
+
 $pagename ="about";
 include("layouts/header.php");
 ?>
@@ -7,8 +16,8 @@ include("layouts/header.php");
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <h1>About Me</h1>
-                            <span class="subheading">This is what I do.</span>
+                            <h1><?php echo $title ?></h1>
+                            <span class="subheading"><?php echo $motto ?></span>
                         </div>
                     </div>
                 </div>
@@ -19,9 +28,7 @@ include("layouts/header.php");
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+                        <p><?php echo $content ?></p>
                     </div>
                 </div>
             </div>
