@@ -14,8 +14,7 @@
     echo "<script>
     alert('Bir Hata meydana geldi Lütfen daha sonra tekrar deneyiniz.');
     window.location.href='../contact.php';
-    </script>"
-    
+    </script>";    
  }
 
 ?>
