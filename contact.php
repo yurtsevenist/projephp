@@ -30,26 +30,22 @@ include("layouts/header.php");
                             <!-- To make this form functional, sign up at-->
                             <!-- https://startbootstrap.com/solution/contact-forms-->
                             <!-- to get an API token!-->
-                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <form method="POST" action="php/messageSend.php">
+
                                 <div class="form-floating">
-                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                    <label for="name">Name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                                </div>
-                                <div class="form-floating">
-                                    <input class="form-control" id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
-                                    <label for="email">Email address</label>
+                                    <input class="form-control" name="email" type="email" placeholder="E-Posta Adresinizi giriniz..." required />
+                                    <label for="email">E-Posta Adresi</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input class="form-control" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
-                                    <label for="phone">Phone Number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                    <input class="form-control" name="subject" type="text" placeholder="Konuyu Giriniz..." required />
+                                    <label for="subject">Konu</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Konu Alanını boş bırakamazsınız</div>
                                 </div>
                                 <div class="form-floating">
-                                    <textarea class="form-control" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
-                                    <label for="message">Message</label>
+                                    <textarea class="form-control" name="message" placeholder="Mesajınız..." style="height: 12rem" required></textarea>
+                                    <label for="message">Mesajınız</label>
                                     <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                 </div>
                                 <br />
@@ -71,7 +67,7 @@ include("layouts/header.php");
                                 <!-- an error submitting the form-->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                                 <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase disabled" id="submitButton" type="submit">Send</button>
+                                <button class="btn btn-primary text-uppercase" name="submitButton" type="submit">Send</button>
                             </form>
                         </div>
                     </div>
